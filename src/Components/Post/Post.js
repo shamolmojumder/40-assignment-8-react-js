@@ -45,7 +45,7 @@ const Post = (props) => {
         </CardContent>
     </CardActionArea>
     <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" variant="contained" color="secondary">
         <a href>Learn More</a>
         </Button>
     </CardActions>
