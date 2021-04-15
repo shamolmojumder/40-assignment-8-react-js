@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 const Post = (props) => {
     console.log(props);
-    const {title,id,body}=props.post
+    const {title,id}=props.post
     const classes = useStyles();
 
     return (
@@ -26,27 +26,17 @@ const Post = (props) => {
     <CardActionArea>
       
         <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-               {
+            <Typography gutterBottom variant="h5" component="h1">
+              Title: {
                    title
                }
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {
-                  id
-              }
-            </Typography>
-
-            <Typography>
-                Discription:{
-                    body
-                }
-            </Typography>
+            </Typography> 
         </CardContent>
     </CardActionArea>
     <CardActions>
-        <Button size="small" variant="contained" color="secondary">
-        <a href>Learn More</a>
+        <Button size="small" variant="outlined" color="secondary">
+        <a href={`/detail/${id}`} > See detail of {id} </a>
+        
         </Button>
     </CardActions>
 </Card>
